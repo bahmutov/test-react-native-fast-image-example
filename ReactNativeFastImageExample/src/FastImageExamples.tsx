@@ -2,16 +2,17 @@ import React from 'react'
 import { ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native'
 import Section from './Section'
 import PriorityExample from './PriorityExample'
-import GifExample from './GifExample'
-import BorderRadiusExample from './BorderRadiusExample'
 import FeatureText from './FeatureText'
-import ProgressExample from './ProgressExample'
-import PreloadExample from './PreloadExample'
-import ResizeModeExample from './ResizeModeExample'
-import TintColorExample from './TintColorExample'
-import LocalImagesExample from './LocalImagesExample'
 import StatusBarUnderlay, { STATUS_BAR_HEIGHT } from './StatusBarUnderlay'
-import AutoSizeExample from './AutoSizeExample'
+
+// import GifExample from './GifExample'
+// import BorderRadiusExample from './BorderRadiusExample'
+// import ProgressExample from './ProgressExample'
+// import PreloadExample from './PreloadExample'
+// import ResizeModeExample from './ResizeModeExample'
+// import TintColorExample from './TintColorExample'
+// import LocalImagesExample from './LocalImagesExample'
+// import AutoSizeExample from './AutoSizeExample'
 
 const FastImageExample = () => (
     <View style={styles.container}>
@@ -30,14 +31,14 @@ const FastImageExample = () => (
                     <FeatureText text="Tap images to reload examples." />
                 </Section>
                 <PriorityExample />
-                <GifExample />
+                {/* <GifExample />
                 <BorderRadiusExample />
                 <ProgressExample />
                 <PreloadExample />
                 <ResizeModeExample />
                 <TintColorExample />
                 <LocalImagesExample />
-                <AutoSizeExample />
+                <AutoSizeExample /> */}
             </View>
         </ScrollView>
         <StatusBarUnderlay />

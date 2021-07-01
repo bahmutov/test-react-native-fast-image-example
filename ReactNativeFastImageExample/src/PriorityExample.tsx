@@ -1,10 +1,30 @@
 import React from 'react'
-import { PixelRatio, StyleSheet, View } from 'react-native'
+import { Platform, PixelRatio, StyleSheet, Text, View } from 'react-native'
 import withCacheBust from './withCacheBust'
-import FastImage from 'react-native-fast-image'
 import Section from './Section'
 import SectionFlex from './SectionFlex'
 import FeatureText from './FeatureText'
+import FastImage from './FastImageWrapper'
+// import FastImage from 'react-native-fast-image'
+
+// const MyFastImage = () => {
+//     return <View><Text>FastImage Here</Text></View>
+// }
+// MyFastImage.priority = {
+//     low: 'low',
+//     normal: 'normal',
+//     high: 'high',
+// }
+
+// let FastImage
+
+// console.log('platform', Platform.OS)
+// if (Platform.OS === 'web') {
+//     FastImage = MyFastImage
+// } else {
+//     FastImage = require('react-native-fast-image')
+//     // import FastImage from 'react-native-fast-image'
+// }
 
 const getImageUrl = (id: string, width: number, height: number) =>
     `https://source.unsplash.com/${id}/${width}x${height}`
@@ -23,9 +43,9 @@ interface PriorityExampleProps {
 
 const PriorityExample = ({ onPressReload, bust }: PriorityExampleProps) => (
     <View>
-        <Section>
+        {/* <Section>
             <FeatureText text="• Prioritize images (low, normal, high)." />
-        </Section>
+        </Section> */}
         <SectionFlex onPress={onPressReload}>
             <FastImage
                 style={styles.image}
@@ -62,4 +82,5 @@ const styles = StyleSheet.create({
     },
 })
 
-export default withCacheBust(PriorityExample)
+// export default withCacheBust(PriorityExample)
+export default PriorityExample

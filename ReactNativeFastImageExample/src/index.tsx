@@ -1,13 +1,14 @@
 import React from 'react'
-import { YellowBox } from 'react-native'
-import { NavigationContainer } from '@react-navigation/native'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { Icon } from './Icon'
-import FastImageExamples from './FastImageExamples'
-import FastImageGrid from './FastImageGrid'
-import DefaultImageGrid from './DefaultImageGrid'
+import { YellowBox, View, Text } from 'react-native'
+// import { NavigationContainer } from '@react-navigation/native'
+// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+// import { Icon } from './Icon'
+// import FastImageExamples from './FastImageExamples'
+// import FastImageGrid from './FastImageGrid'
+// import DefaultImageGrid from './DefaultImageGrid'
+import PriorityExample from './PriorityExample'
 
-const Tab = createBottomTabNavigator()
+// const Tab = createBottomTabNavigator()
 
 YellowBox.ignoreWarnings([
     'Warning: isMounted(...) is deprecated',
@@ -15,37 +16,42 @@ YellowBox.ignoreWarnings([
 ])
 
 export default function App() {
-    return (
-        <NavigationContainer>
-            <Tab.Navigator>
-                <Tab.Screen
-                    name="FastImage Example"
-                    component={FastImageExamples}
-                    options={{
-                        tabBarIcon: props => (
-                            <Icon name="ios-information-circle" {...props} />
-                        ),
-                    }}
-                />
-                <Tab.Screen
-                    name="Image Grid"
-                    component={DefaultImageGrid}
-                    options={{
-                        tabBarIcon: props => (
-                            <Icon name="ios-image" {...props} />
-                        ),
-                    }}
-                />
-                <Tab.Screen
-                    name="FastImage Grid"
-                    component={FastImageGrid}
-                    options={{
-                        tabBarIcon: props => (
-                            <Icon name="ios-photos" {...props} />
-                        ),
-                    }}
-                />
-            </Tab.Navigator>
-        </NavigationContainer>
-    )
+    return <PriorityExample />
+    // return <View><Text>Hello world</Text></View>
 }
+
+// export default function App() {
+//     return (
+//         <NavigationContainer>
+//             <Tab.Navigator>
+//                 <Tab.Screen
+//                     name="FastImage Example"
+//                     component={FastImageExamples}
+//                     options={{
+//                         tabBarIcon: props => (
+//                             <Icon name="ios-information-circle" {...props} />
+//                         ),
+//                     }}
+//                 />
+//                 {/* <Tab.Screen
+//                     name="Image Grid"
+//                     component={DefaultImageGrid}
+//                     options={{
+//                         tabBarIcon: props => (
+//                             <Icon name="ios-image" {...props} />
+//                         ),
+//                     }}
+//                 />
+//                 <Tab.Screen
+//                     name="FastImage Grid"
+//                     component={FastImageGrid}
+//                     options={{
+//                         tabBarIcon: props => (
+//                             <Icon name="ios-photos" {...props} />
+//                         ),
+//                     }}
+//                 /> */}
+//             </Tab.Navigator>
+//         </NavigationContainer>
+//     )
+// }
